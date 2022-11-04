@@ -5,4 +5,9 @@ const DOMSelectors = {
   empty: document.querySelectorAll(".nothing"),
 };
 
-console.log(DOMSelectors.point);
+function backgroundAndText(background, text) {
+  background.style.backgroundColor = "red";
+  text.innerHTML = "this is a red box";
+}
+
+backgroundAndText(DOMSelectors.box, DOMSelectors.text);
