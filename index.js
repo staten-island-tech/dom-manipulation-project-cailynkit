@@ -1,13 +1,15 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   text: document.querySelector("#text"), //class
-  point: document.querySelector("point"),
-  empty: document.querySelectorAll(".nothing"),
+  box: document.getElementById("big-black-box"),
+  points: document.querySelectorAll(".point"),
+  background: document.querySelector("#big-black-box"),
 };
 
 function backgroundAndText(background, text) {
   background.style.backgroundColor = "red";
   text.innerHTML = "this is a red box";
+  text.style.fontSize = "40px";
 }
 
-backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+backgroundAndText(DOMSelectors.background, DOMSelectors.text);
