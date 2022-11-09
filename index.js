@@ -13,3 +13,7 @@ function backgroundAndText(background, text) {
 }
 
 backgroundAndText(DOMSelectors.background, DOMSelectors.text);
+
+DOMSelectors.button.addEventListener("click", function () {
+  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+});
