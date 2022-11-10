@@ -12,8 +12,6 @@ function backgroundAndText(background, text) {
   text.style.fontSize = "40px";
 }
 
-backgroundAndText(DOMSelectors.background, DOMSelectors.text);
-
 DOMSelectors.button.addEventListener("click", function () {
   backgroundAndText(DOMSelectors.box, DOMSelectors.text);
 });
