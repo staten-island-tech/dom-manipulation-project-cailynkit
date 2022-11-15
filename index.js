@@ -1,12 +1,17 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   song: document.getElementById("song"),
-  results: document.getElementById("rusults"),
+  artist: document.getElementById("artist"),
+  results: document.getElementById("results"),
+};
+
+const user = {
+  song: "",
+  artist: "",
 };
 
 DOMSelectors.button.addEventListener("click", function () {
-  DOMSelectors.results.innerHTML = `
-  <h1>Howdy </h1>
-  Hello there! You like ${DOMSelectors.song.value}
-  `;
+  user.song = DOMSelectors.song.value;
+  user.artist = DOMSelectors.artist.value;
+  DOMSelectors.results.innerHTML = `<br /> Hi! You like the song ${user.song} by the artist ${user.artist}.`;
 });
