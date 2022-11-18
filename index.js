@@ -1,9 +1,8 @@
 const DOMSelectors = {
-  enter: document.getElementById("btn1"),
-  remove: document.getElementById("remove"),
+  enter: document.getElementById("enter"),
+  clear: document.getElementById("clear"),
   song: document.getElementById("song"),
   artist: document.getElementById("artist"),
-  input: document.getElementById("input"),
   results: document.getElementById("results"),
   div: document.getElementById("container"),
 };
@@ -14,14 +13,15 @@ const user = {
 };
 
 DOMSelectors.enter.addEventListener("click", function () {
-  let song = DOMSelectors.song.value;
-  DOMSelectors.div.insertAdjacentElement(
+  user.song = DOMSelectors.song.value;
+  user.artist = DOMSelectors.artist.value;
+  DOMSelectors.div.insertAdjacentHTML(
     "beforeend",
-    `<p>You like the song ${song} by the artist ${song}.</p>`
+    `<p>You like the song ${user.song} by the artist ${user.artist}.</p>`
   );
 });
 
-DOMSelectors.remove.addEventListener("click", function () {
-  let input = DOMSelectors.input.value;
-  DOMSelectors.input.value = "";
+DOMSelectors.clear.addEventListener("click", function () {
+  DOMSelectors.song.value = "";
+  DOMSelectors.artist.value = "";
 });
