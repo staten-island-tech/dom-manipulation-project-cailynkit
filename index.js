@@ -24,4 +24,5 @@ DOMSelectors.enter.addEventListener("click", function () {
 DOMSelectors.clear.addEventListener("click", function () {
   DOMSelectors.song.value = "";
   DOMSelectors.artist.value = "";
+  DOMSelectors.div.insertAdjacentHTML.remove();
 });
